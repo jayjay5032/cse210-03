@@ -7,12 +7,10 @@
 Responsibility: generate the puzzle from the list
 
 State:
-list_of_words
-the_answer
+list_of_words, the_answer
 
 Behaviors: 
-generate answer
-get answer
+generate answer, get answer
 ```
 class: puzzle
 
@@ -33,8 +31,7 @@ State:
 user input
 
 behavior:
-get user input
-print to screen
+get user input, print to screen
 ```
 class: terminal
 
@@ -51,8 +48,7 @@ print_to_screen(): none
 Responsibility: compare the user input with the answer. If correct, return user input and set life_lost Boolean to FALSE, vice versa. Guess wrong also result in lost 1 life.
 
 State:
-Life lost
-Remain lifes
+Life lost, Remain lifes
 
 Behavior:
 Good or bad guess
@@ -86,9 +82,7 @@ is_ended(): bool
 Responsibility: determined the content to display on the screen
 
 State:
-Guess result in list
-Life pic in list
-Message to display
+Guess result in list, Life pic in list, Message to display
 
 Behavior:
 Content to display
