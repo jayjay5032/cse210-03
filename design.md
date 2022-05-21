@@ -1,5 +1,5 @@
 
-## Object: Puzzle
+Object: Puzzle
 ---
 Responsibility: generate the puzzle from the list
 ---
@@ -11,7 +11,7 @@ Behaviors:
 generate answer
 get answer
 
-## class: puzzle
+class: puzzle
 ---
 list_of_words: string
 the_answer: string
@@ -22,7 +22,7 @@ get_answer(): string
 
 
 
-## Object: Terminal
+Object: Terminal
 ---
 Responsibility: take inputs from the user and print output to the screen
 ---
@@ -33,7 +33,7 @@ behavior:
 get user input
 print to screen
 
-## class: terminal
+class: terminal
 ---
 user_input: string
 ---
@@ -43,7 +43,7 @@ print_to_screen(): none
 
 
 
-## Object: Compare
+Object: Compare
 ---
 Responsibility: compare the user input with the answer. If correct, return user input and set life_lost Boolean to FALSE, vice versa. Guess wrong also result in lost 1 life.
 ---
@@ -54,7 +54,7 @@ Remain lifes
 Behavior:
 Good or bad guess
 
-## class: compare
+class: compare
 ---
 Life_lost: bool
 Remain_Lifes: int
@@ -64,21 +64,21 @@ good_or_bad_guess(): bool, string, int
 
 
 
-## Object: is ended
+Object: is ended
 ---
 Responsibility: determined if the game is ended: the user guessed the word or loses all the life
 ---
 Behavior:
 Is ended
 
-## class: is_ended
+class: is_ended
 ---
 is_ended(): bool
 
 
 
 
-## Object: display
+Object: display
 ---
 Responsibility: determined the content to display on the screen
 ---
@@ -90,7 +90,7 @@ Message to display
 Behavior:
 Content to display
 
-## class:display
+class:display
 ---
 Guess_result_in_list: list
 Life_pic_in_list: list
