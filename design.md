@@ -1,4 +1,8 @@
-Object: Puzzle
+# Design for Jumper
+
+
+
+### Object: Puzzle
 
 Responsibility: generate the puzzle from the list
 
@@ -21,7 +25,7 @@ get_answer(): string
 
 
 
-Object: Terminal
+### Object: Terminal
 
 Responsibility: take inputs from the user and print output to the screen
 
