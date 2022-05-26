@@ -17,7 +17,7 @@ class: puzzle
 list_of_words: string
 the_answer: string
 
-generate _answer(): none
+generate_answer(): none
 get_answer(): string
 ```
 
@@ -45,7 +45,7 @@ print_to_screen(): none
 
 ### Object: Compare
 
-Responsibility: compare the user input with the answer. If correct, return user input and set life_lost Boolean to FALSE, vice versa. Guess wrong also result in lost 1 life.
+Responsibility: compare the user input with the answer. If correct, return user input. Guess wrong result in lost 1 life.
 
 State:
 Life lost, Remain lifes
@@ -61,19 +61,6 @@ Remain_Lifes: int
 good_or_bad_guess(): bool, string, int
 ```
 
-
-
-### Object: is ended
-
-Responsibility: determined if the game is ended: the user guessed the word or loses all the life
-
-Behavior:
-Is ended
-```
-class: is_ended
-
-is_ended(): bool
-```
 
 
 
