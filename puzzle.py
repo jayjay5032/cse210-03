@@ -8,4 +8,7 @@ class Puzzle:
         self.the_answer = self.list_of_words[random(0,999)]
 
     def get_answer(self):
-        return self.the_answer
+        a_list =[]
+        for i in len(self.the_answer):
+            a_list.append[i]
+        return a_list

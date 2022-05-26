@@ -14,6 +14,7 @@ class Director:
         self.display = Display()
         
     def start_game(self):
+        self.puzzle.generate_answer()
         while self.is_playing:
             self._get_inputs()
             self._do_updates()
@@ -27,6 +28,7 @@ class Director:
         
         
     def _do_outputs(self):
-        self.terminal.print_to_screen(self.display)
+        self.terminal.print_to_screen(self.display.content_to_display(self.puzzle.get_answer(), self.user_input, self.remain_lifes))
         if self.remain_lifes == 0:
+            print("Game over!")
             self.is_playing = False
