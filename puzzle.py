@@ -5,7 +5,6 @@ class Puzzle:
         self.the_answer = str
     
     def generate_answer(self):
-        #self.the_answer = self.list_of_words[random(0,999)] 
         self.the_answer = random.choice(self.list_of_words)
 
     def get_answer(self):
