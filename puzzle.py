@@ -10,6 +10,5 @@ class Puzzle:
 
     def get_answer(self):
         a_list =[]
-        for i in len(self.the_answer):
-            a_list.append[i]
+        a_list = self.the_answer.split()
         return a_list

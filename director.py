@@ -23,7 +23,7 @@ class Director:
             self._do_outputs()
 
     def _get_inputs(self):
-        self.user_input = (input("\nGuess a letter [a-z]: "))
+        self.user_input = input("\nGuess a letter [a-z]: ")
         self.terminal.get_user_input(self.user_input)
     def _do_updates(self):
         self.remain_lifes = self.compare.good_or_bad_guess(self.puzzle.get_answer(), self.remain_lifes, self.user_input)
