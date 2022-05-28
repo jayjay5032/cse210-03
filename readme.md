@@ -30,4 +30,3 @@ Ruei-Han Chang (cha16007@byui.edu)
 Junhee Hays (mjh226@byui.edu)
 Jesica Gutierrez (gut16002@byui.edu)
 Trevor Jones (tjones689@byui.edu)
-Angela Slinker

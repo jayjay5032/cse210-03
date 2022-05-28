@@ -25,12 +25,11 @@ class Director:
     def _get_inputs(self):
         self.user_input = input("\nGuess a letter [a-z]: ")
         self.terminal.get_user_input(self.user_input)
+
     def _do_updates(self):
         self.remain_lifes = self.compare.good_or_bad_guess(self.puzzle.get_answer(), self.remain_lifes, self.user_input)
-        
-        
+     
     def _do_outputs(self):
-
         self.message_to_display, self.cAns = self.display.content_to_display(self.cAns,self.puzzle.get_answer(), self.user_input, self.remain_lifes)
         
         for i in self.message_to_display:
