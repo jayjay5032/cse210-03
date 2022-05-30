@@ -6,6 +6,7 @@ from display import Display
 class Director:
     def __init__(self):
         self.puzzle = Puzzle()
+        self.the_answer = []
         self.is_playing = True
         self.terminal = Terminal()
         self.user_input = str
@@ -17,6 +18,12 @@ class Director:
         
     def start_game(self):
         self.puzzle.generate_answer()
+        self.the_answer = self.puzzle.get_answer()
+        for i in range(len(self.the_answer)):
+            if self.the_answer[i].isalpha():
+                self.cAns.append("_")
+            else:
+                self.cAns.append(" ")
         while self.is_playing:
             self._get_inputs()
             self._do_updates()
@@ -35,6 +42,6 @@ class Director:
         for i in self.message_to_display:
             self.terminal.print_to_screen(i)
             
-        if self.remain_lifes == 0:
+        if self.remain_lifes == 0 or self.cAns == self.puzzle.get_answer():
             print("Game over!")
             self.is_playing = False

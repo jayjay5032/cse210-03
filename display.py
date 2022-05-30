@@ -2,31 +2,32 @@ class Display:
 
     def __init__(self):
         self.Guess_result_in_list = []
-        self.Life_pic_in_list = ["___", "/___\\", "\\   /", "\\ /"]
+        self.Life_pic_in_list = [" ___", "/___\\", "\\   /", " \\ /"]
         self.character_list = []
         self.message_to_display = []
-        self.answer_display = ""
+        self.answer_display = []
 
     def content_to_display(self, cAns, the_answer, user_input, remaining_lives):
         '''
         Responsibility: determined the content to display on the screen
         '''
-
+        self.message_to_display = []
+        self.answer_display = cAns
         cLives = remaining_lives
         uInput = user_input
-        cAns = list(the_answer).copy()
-
-        for i in cAns:
-            self.answer_display += "_ "
+        str_answer_display = ""
+        
 
         if uInput in the_answer:
-            
-            for i, elm in enumerate(cAns):
-                if(elm == uInput):
-                    self.answer_display.replace(i, f"{uInput} ")
-
-
-        self.message_to_display.append("")
+            for i in range(len(the_answer)):
+                if(the_answer[i] == uInput):
+                    self.answer_display[i] = uInput
+        
+        for char in self.answer_display:
+            str_answer_display += char
+    
+        self.message_to_display.append(str_answer_display)
+        self.message_to_display.append("\n")
 
         if (cLives < 4):
             for i in self.Life_pic_in_list[4 - cLives:]:
@@ -45,4 +46,4 @@ class Display:
 
         self.message_to_display.append("^^^^^^")
 
-        return self.message_to_display, cAns
+        return self.message_to_display, self.answer_display

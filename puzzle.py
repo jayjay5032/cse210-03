@@ -9,5 +9,7 @@ class Puzzle:
 
     def get_answer(self):
         a_list =[]
-        a_list = self.the_answer.split()
+        for count, elm in enumerate(self.the_answer):
+            a_list.append(elm)
+            a_list.append(" ")
         return a_list
