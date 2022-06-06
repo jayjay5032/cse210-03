@@ -6,7 +6,7 @@ You have four chances to miss then you will lose your parachute!
 ## Getting Started
 ---
 To play the game, you need a python 3.8.0 or newer installed on the computer.
-``` 
+
 You can also start the game through Visual Studio Code. Make sure to have python extension installed on it.
 
 ## Project Structure
